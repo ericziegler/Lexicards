@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainController: UIViewController {
+class MainController: BaseViewController {
 
     // MARK: - Init
 
