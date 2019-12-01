@@ -17,6 +17,10 @@
 		78131E60239304000067336D /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78131E5F239304000067336D /* BaseNavigationController.swift */; };
 		78131E62239304090067336D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78131E61239304090067336D /* BaseViewController.swift */; };
 		78131E64239304140067336D /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78131E63239304140067336D /* BaseTableViewController.swift */; };
+		78542E6623940A9700A2B34C /* Interstate-RegularCondensed.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 78542E6223940A9700A2B34C /* Interstate-RegularCondensed.ttf */; };
+		78542E6723940A9700A2B34C /* InformaPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 78542E6323940A9700A2B34C /* InformaPro-Bold.otf */; };
+		78542E6823940A9700A2B34C /* InterstateLightCondensed.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 78542E6423940A9700A2B34C /* InterstateLightCondensed.ttf */; };
+		78542E6923940A9700A2B34C /* InformaPro-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 78542E6523940A9700A2B34C /* InformaPro-Medium.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,10 @@
 		78131E5F239304000067336D /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		78131E61239304090067336D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		78131E63239304140067336D /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
+		78542E6223940A9700A2B34C /* Interstate-RegularCondensed.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Interstate-RegularCondensed.ttf"; sourceTree = "<group>"; };
+		78542E6323940A9700A2B34C /* InformaPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "InformaPro-Bold.otf"; sourceTree = "<group>"; };
+		78542E6423940A9700A2B34C /* InterstateLightCondensed.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = InterstateLightCondensed.ttf; sourceTree = "<group>"; };
+		78542E6523940A9700A2B34C /* InformaPro-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "InformaPro-Medium.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				78131E49239302EE0067336D /* Assets.xcassets */,
+				78542E6123940A4B00A2B34C /* Fonts */,
 				78131E4B239302EE0067336D /* LaunchScreen.storyboard */,
 				78131E4E239302EE0067336D /* Info.plist */,
 			);
@@ -133,6 +142,17 @@
 				78131E63239304140067336D /* BaseTableViewController.swift */,
 			);
 			name = BaseControllers;
+			sourceTree = "<group>";
+		};
+		78542E6123940A4B00A2B34C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				78542E6323940A9700A2B34C /* InformaPro-Bold.otf */,
+				78542E6523940A9700A2B34C /* InformaPro-Medium.otf */,
+				78542E6223940A9700A2B34C /* Interstate-RegularCondensed.ttf */,
+				78542E6423940A9700A2B34C /* InterstateLightCondensed.ttf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +213,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78542E6623940A9700A2B34C /* Interstate-RegularCondensed.ttf in Resources */,
+				78542E6723940A9700A2B34C /* InformaPro-Bold.otf in Resources */,
+				78542E6823940A9700A2B34C /* InterstateLightCondensed.ttf in Resources */,
+				78542E6923940A9700A2B34C /* InformaPro-Medium.otf in Resources */,
 				78131E4D239302EE0067336D /* LaunchScreen.storyboard in Resources */,
 				78131E4A239302EE0067336D /* Assets.xcassets in Resources */,
 				78131E48239302EE0067336D /* Main.storyboard in Resources */,
