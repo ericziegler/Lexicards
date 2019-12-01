@@ -21,6 +21,9 @@
 		78542E6723940A9700A2B34C /* InformaPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 78542E6323940A9700A2B34C /* InformaPro-Bold.otf */; };
 		78542E6823940A9700A2B34C /* InterstateLightCondensed.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 78542E6423940A9700A2B34C /* InterstateLightCondensed.ttf */; };
 		78542E6923940A9700A2B34C /* InformaPro-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 78542E6523940A9700A2B34C /* InformaPro-Medium.otf */; };
+		78542E6B239416A800A2B34C /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78542E6A239416A800A2B34C /* Card.swift */; };
+		78542E6D239416B200A2B34C /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78542E6C239416B200A2B34C /* Deck.swift */; };
+		78542E6F23941D9500A2B34C /* DeckList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78542E6E23941D9500A2B34C /* DeckList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,9 @@
 		78542E6323940A9700A2B34C /* InformaPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "InformaPro-Bold.otf"; sourceTree = "<group>"; };
 		78542E6423940A9700A2B34C /* InterstateLightCondensed.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = InterstateLightCondensed.ttf; sourceTree = "<group>"; };
 		78542E6523940A9700A2B34C /* InformaPro-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "InformaPro-Medium.otf"; sourceTree = "<group>"; };
+		78542E6A239416A800A2B34C /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		78542E6C239416B200A2B34C /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
+		78542E6E23941D9500A2B34C /* DeckList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +111,9 @@
 		78131E56239303750067336D /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				78542E6E23941D9500A2B34C /* DeckList.swift */,
+				78542E6C239416B200A2B34C /* Deck.swift */,
+				78542E6A239416A800A2B34C /* Card.swift */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -230,6 +239,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78542E6D239416B200A2B34C /* Deck.swift in Sources */,
 				78131E5D239303C10067336D /* FoundationExtensions.swift in Sources */,
 				78131E45239302EE0067336D /* MainController.swift in Sources */,
 				78131E43239302EE0067336D /* AppDelegate.swift in Sources */,
@@ -237,6 +247,8 @@
 				78131E60239304000067336D /* BaseNavigationController.swift in Sources */,
 				78131E5B239303B70067336D /* UIKitExtensions.swift in Sources */,
 				78131E62239304090067336D /* BaseViewController.swift in Sources */,
+				78542E6F23941D9500A2B34C /* DeckList.swift in Sources */,
+				78542E6B239416A800A2B34C /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
