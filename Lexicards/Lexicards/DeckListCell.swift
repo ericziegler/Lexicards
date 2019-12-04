@@ -17,24 +17,34 @@ class DeckListCell: UITableViewCell {
 
     // MARK: - Properties
 
-    @IBOutlet var colorView: UIView!
+    @IBOutlet var colorView: GradientView!
     @IBOutlet var nameLabel: BoldLabel!
+    @IBOutlet var arrowImageView: UIImageView!
 
     // MARK: - Init
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        colorView.layer.borderColor = UIColor.black.cgColor
-        colorView.layer.borderWidth = 2
-        colorView.layer.cornerRadius = colorView.frame.size.height / 2
-        colorView.clipsToBounds = true
     }
 
     // MARK: - Layout
 
     func layoutForDeck(deck: Deck) {
-        colorView.backgroundColor = deck.color.backgroundColor
         nameLabel.text = deck.name
+        nameLabel.textColor = deck.color.foregroundColor
+        arrowImageView.image = arrowImageView.image?.maskedImageWithColor(deck.color.foregroundColor)
+
+        if deck.color == .white {
+            colorView.updateGradientWith(firstColor: UIColor(hex: 0xeeeeee), secondColor: UIColor.white, vertical: false)
+        }
+        else if deck.color == .gray {
+            colorView.updateGradientWith(firstColor: deck.color.backgroundColor, secondColor: UIColor.white, vertical: false)
+        }
+        else if deck.color == .black {
+            colorView.updateGradientWith(firstColor: deck.color.backgroundColor, secondColor: UIColor(hex: 0x333333), vertical: false)
+        } else {
+            colorView.updateGradientWith(firstColor: deck.color.backgroundColor, secondColor: deck.color.backgroundColor.lighterColor, vertical: false)
+        }
     }
 
 }

@@ -20,7 +20,7 @@ class DebugData {
 
     // MARK: - Populate Data
 
-    func populateData() {
+    func populateData(persist: Bool = false) {
         clearData()
 
         var deck = Deck(name: "Numbers", color: .gray)
@@ -73,6 +73,7 @@ class DebugData {
         deck.cards.append(Card(question: "oogul mahgi", answer: "upper block"))
         deck.cards.append(Card(question: "sohnal mahgi", answer: "knifehand block"))
         deck.cards.append(Card(question: "chirugi", answer: "punching"))
+        deckList.decks.append(deck)
 
         deck = Deck(name: "Green Belt", color: .green)
         deck.cards.append(Card(question: "ap goobi jah she", answer: "front stance"))
@@ -131,7 +132,9 @@ class DebugData {
         deck.cards.append(Card(question: "jung shin tong il", answer: "concentration of mind, body, spirit and emotions"))
         deckList.decks.append(deck)
 
-        deckList.saveDecks()
+        if persist == true {
+            deckList.saveDecks()
+        }
     }
 
     // MARK: - Clear Data

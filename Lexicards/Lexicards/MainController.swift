@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainController: UIViewController {
+class MainController: BaseViewController {
 
     // MARK: - Properties
 
@@ -23,15 +23,6 @@ class MainController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupNavBar()
-    }
-
-    private func setupNavBar() {
-        headerLabel.alpha = 0
-        headerLabel.text = MyDecksTitle.uppercased()
-        UIView.animate(withDuration: 0.2) {
-            self.headerLabel.alpha = 1
-        }
     }
 
     // MARK: - Actions
@@ -65,7 +56,8 @@ extension MainController: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let deck = deckList.decks[indexPath.row]
-        print(deck.name)
+        let controller = DeckController.createControllerFor(deck: deck)
+        navigationController?.pushViewController(controller, animated: true)
     }
 
 }

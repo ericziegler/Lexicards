@@ -39,10 +39,10 @@ enum DeckColor: Int {
 
     var foregroundColor: UIColor {
         switch self {
-        case .white, .yellow:
-            return UIColor.white
-        default:
+        case .white, .yellow, .gray:
             return UIColor.black
+        default:
+            return UIColor.white
         }
     }
 }
