@@ -29,7 +29,7 @@
 		<string>armv7</string>
 	</array>
 	<key>UIStatusBarStyle</key>
-	<string>UIStatusBarStyleLightContent</string>
+	<string>UIStatusBarStyleDefault</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
@@ -41,12 +41,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-    <key>UIAppFonts</key>
-    <array>
-        <string>InformaPro-Bold.otf</string>
-        <string>InformaPro-Medium.otf</string>
-        <string>Interstate-RegularCondensed.ttf</string>
-        <string>InterstateLightCondensed.ttf</string>
-    </array>
 </dict>
 </plist>

@@ -35,6 +35,11 @@ class Card: NSObject, NSCoding {
 
     // MARK: - Init
 
+    init(question: String, answer: String) {
+        self.question = question
+        self.answer = answer
+    }
+
     override init() {
         super.init()
     }

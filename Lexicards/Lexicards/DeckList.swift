@@ -20,6 +20,8 @@ class DeckList {
 
     // MARK: - Init
 
+    static let shared = DeckList()
+
     init() {
         loadDecks()
     }

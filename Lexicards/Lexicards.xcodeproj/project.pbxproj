@@ -17,13 +17,13 @@
 		78131E60239304000067336D /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78131E5F239304000067336D /* BaseNavigationController.swift */; };
 		78131E62239304090067336D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78131E61239304090067336D /* BaseViewController.swift */; };
 		78131E64239304140067336D /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78131E63239304140067336D /* BaseTableViewController.swift */; };
-		78542E6623940A9700A2B34C /* Interstate-RegularCondensed.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 78542E6223940A9700A2B34C /* Interstate-RegularCondensed.ttf */; };
-		78542E6723940A9700A2B34C /* InformaPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 78542E6323940A9700A2B34C /* InformaPro-Bold.otf */; };
-		78542E6823940A9700A2B34C /* InterstateLightCondensed.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 78542E6423940A9700A2B34C /* InterstateLightCondensed.ttf */; };
-		78542E6923940A9700A2B34C /* InformaPro-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 78542E6523940A9700A2B34C /* InformaPro-Medium.otf */; };
 		78542E6B239416A800A2B34C /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78542E6A239416A800A2B34C /* Card.swift */; };
 		78542E6D239416B200A2B34C /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78542E6C239416B200A2B34C /* Deck.swift */; };
 		78542E6F23941D9500A2B34C /* DeckList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78542E6E23941D9500A2B34C /* DeckList.swift */; };
+		78542E7123945F6C00A2B34C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78542E7023945F6C00A2B34C /* Constants.swift */; };
+		78BBFDED23968C0800D7EC3C /* DeckListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BBFDEC23968C0800D7EC3C /* DeckListCell.swift */; };
+		78BBFDEF2398185B00D7EC3C /* DebugData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BBFDEE2398185B00D7EC3C /* DebugData.swift */; };
+		78BBFDF1239820D200D7EC3C /* BlankCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BBFDF0239820D200D7EC3C /* BlankCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,13 +39,13 @@
 		78131E5F239304000067336D /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		78131E61239304090067336D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		78131E63239304140067336D /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
-		78542E6223940A9700A2B34C /* Interstate-RegularCondensed.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Interstate-RegularCondensed.ttf"; sourceTree = "<group>"; };
-		78542E6323940A9700A2B34C /* InformaPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "InformaPro-Bold.otf"; sourceTree = "<group>"; };
-		78542E6423940A9700A2B34C /* InterstateLightCondensed.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = InterstateLightCondensed.ttf; sourceTree = "<group>"; };
-		78542E6523940A9700A2B34C /* InformaPro-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "InformaPro-Medium.otf"; sourceTree = "<group>"; };
 		78542E6A239416A800A2B34C /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		78542E6C239416B200A2B34C /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
 		78542E6E23941D9500A2B34C /* DeckList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckList.swift; sourceTree = "<group>"; };
+		78542E7023945F6C00A2B34C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		78BBFDEC23968C0800D7EC3C /* DeckListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckListCell.swift; sourceTree = "<group>"; };
+		78BBFDEE2398185B00D7EC3C /* DebugData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugData.swift; sourceTree = "<group>"; };
+		78BBFDF0239820D200D7EC3C /* BlankCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlankCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +104,7 @@
 			children = (
 				78131E5A239303B70067336D /* UIKitExtensions.swift */,
 				78131E5C239303C10067336D /* FoundationExtensions.swift */,
+				78542E7023945F6C00A2B34C /* Constants.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -114,6 +115,7 @@
 				78542E6E23941D9500A2B34C /* DeckList.swift */,
 				78542E6C239416B200A2B34C /* Deck.swift */,
 				78542E6A239416A800A2B34C /* Card.swift */,
+				78BBFDEE2398185B00D7EC3C /* DebugData.swift */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -121,6 +123,8 @@
 		78131E572393037B0067336D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				78BBFDEC23968C0800D7EC3C /* DeckListCell.swift */,
+				78BBFDF0239820D200D7EC3C /* BlankCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -156,10 +160,6 @@
 		78542E6123940A4B00A2B34C /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				78542E6323940A9700A2B34C /* InformaPro-Bold.otf */,
-				78542E6523940A9700A2B34C /* InformaPro-Medium.otf */,
-				78542E6223940A9700A2B34C /* Interstate-RegularCondensed.ttf */,
-				78542E6423940A9700A2B34C /* InterstateLightCondensed.ttf */,
 			);
 			name = Fonts;
 			sourceTree = "<group>";
@@ -222,10 +222,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78542E6623940A9700A2B34C /* Interstate-RegularCondensed.ttf in Resources */,
-				78542E6723940A9700A2B34C /* InformaPro-Bold.otf in Resources */,
-				78542E6823940A9700A2B34C /* InterstateLightCondensed.ttf in Resources */,
-				78542E6923940A9700A2B34C /* InformaPro-Medium.otf in Resources */,
 				78131E4D239302EE0067336D /* LaunchScreen.storyboard in Resources */,
 				78131E4A239302EE0067336D /* Assets.xcassets in Resources */,
 				78131E48239302EE0067336D /* Main.storyboard in Resources */,
@@ -240,12 +236,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				78542E6D239416B200A2B34C /* Deck.swift in Sources */,
+				78542E7123945F6C00A2B34C /* Constants.swift in Sources */,
 				78131E5D239303C10067336D /* FoundationExtensions.swift in Sources */,
 				78131E45239302EE0067336D /* MainController.swift in Sources */,
+				78BBFDF1239820D200D7EC3C /* BlankCell.swift in Sources */,
 				78131E43239302EE0067336D /* AppDelegate.swift in Sources */,
+				78BBFDEF2398185B00D7EC3C /* DebugData.swift in Sources */,
 				78131E64239304140067336D /* BaseTableViewController.swift in Sources */,
 				78131E60239304000067336D /* BaseNavigationController.swift in Sources */,
 				78131E5B239303B70067336D /* UIKitExtensions.swift in Sources */,
+				78BBFDED23968C0800D7EC3C /* DeckListCell.swift in Sources */,
 				78131E62239304090067336D /* BaseViewController.swift in Sources */,
 				78542E6F23941D9500A2B34C /* DeckList.swift in Sources */,
 				78542E6B239416A800A2B34C /* Card.swift in Sources */,

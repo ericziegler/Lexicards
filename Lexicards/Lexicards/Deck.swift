@@ -14,6 +14,9 @@ let DeckIdCacheKey = "DeckIdCacheKey"
 let DeckNameCacheKey = "DeckNameCacheKey"
 let DeckColorHexCacheKey = "DeckColorHexCacheKey"
 let DeckCardsCacheKey = "DeckCardsCacheKey"
+let DeckCumulativeRoundCountCacheKey = "DeckCumulativeRoundCountCacheKey"
+let DeckCumulativeCorrectCountCacheKey = "DeckCumulativeCorrectCountCacheKey"
+let DeckCumulativeCardCountCacheKey = "DeckCumulativeCardCountCacheKey"
 
 // MARK: - Enums
 
@@ -28,6 +31,7 @@ enum DeckColor: Int {
     case red = 0xff0000
     case navy = 0x003380
     case black = 0x000000
+    case gray = 0xbbbbbb
 
     var backgroundColor: UIColor {
         return UIColor(hex: self.rawValue)
@@ -51,21 +55,41 @@ class Deck: NSObject, NSCoding {
     var name = ""
     var color = DeckColor.black
     var cards = [Card]()
+
+    var cardCount: Int {
+        return cards.count
+    }
+    var correctCount = 0
     var percentCorrect: Double {
         if cards.count == 0 {
             return 0
         }
 
-        var correctCount = 0
+        correctCount = 0
         for curCard in cards {
             if curCard.status == .correct {
                 correctCount += 1
             }
         }
-        return Double(correctCount) / Double(cards.count)
+        return Double(correctCount) / Double(cardCount)
+    }
+
+    var cumulativeRoundCount = 0
+    var cumulativeCardCount =  0
+    var cumulativeCorrectCount = 0
+    var cumulativePercentCorrect: Double {
+        if cumulativeCardCount == 0 {
+            return 0
+        }
+        return Double(cumulativeCorrectCount) / Double(cumulativeCardCount)
     }
 
     // MARK: - Init
+
+    init(name: String, color: DeckColor = .black) {
+        self.name = name
+        self.color = color
+    }
 
     override init() {
         super.init()
@@ -86,6 +110,9 @@ class Deck: NSObject, NSCoding {
         if let cardsData = decoder.decodeObject(forKey: DeckCardsCacheKey) as? Data, let deckCards = NSKeyedUnarchiver.unarchiveObject(with: cardsData) as? [Card] {
             cards = deckCards
         }
+        cumulativeRoundCount = decoder.decodeInteger(forKey: DeckCumulativeRoundCountCacheKey)
+        cumulativeCardCount = decoder.decodeInteger(forKey: DeckCumulativeCardCountCacheKey)
+        cumulativeCorrectCount = decoder.decodeInteger(forKey: DeckCumulativeCorrectCountCacheKey)
     }
 
     public func encode(with coder: NSCoder) {
@@ -94,6 +121,9 @@ class Deck: NSObject, NSCoding {
         coder.encode(color.rawValue, forKey: DeckColorHexCacheKey)
         let cardsData = NSKeyedArchiver.archivedData(withRootObject: cards)
         coder.encode(cardsData, forKey: DeckCardsCacheKey)
+        coder.encode(cumulativeRoundCount, forKey: DeckCumulativeRoundCountCacheKey)
+        coder.encode(cumulativeCardCount, forKey: DeckCumulativeCardCountCacheKey)
+        coder.encode(cumulativeCorrectCount, forKey: DeckCumulativeCorrectCountCacheKey)
     }
 
 }
