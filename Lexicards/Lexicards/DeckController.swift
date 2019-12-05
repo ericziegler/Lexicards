@@ -27,7 +27,7 @@ class DeckController: BaseViewController {
     @IBOutlet var lastRoundLabel: RegularLabel!
     @IBOutlet var playButton: BoldButton!
 
-    var deck: Deck?
+    var deck: Deck!
 
     // MARK: - Init
 
@@ -43,11 +43,12 @@ class DeckController: BaseViewController {
         layout()
     }
 
-    private func layout() {
-        guard let deck = self.deck else {
-            return
-        }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        updateStats()
+    }
 
+    private func layout() {
         infoBackground.layer.cornerRadius = 12
         colorView.layer.cornerRadius = colorView.frame.size.height / 2
         colorView.layer.borderColor = UIColor.darkGray.cgColor
@@ -55,13 +56,18 @@ class DeckController: BaseViewController {
 
         nameLabel.text = deck.name
         colorView.backgroundColor = deck.color.backgroundColor
+
+        updateStats()
+
+        playButton.layer.cornerRadius = 12
+    }
+
+    private func updateStats() {
         roundCountLabel.text = String(deck.cumulativeRoundCount)
         let formattedCumulativePercentCorrect = Double(round(1000 * deck.cumulativePercentCorrect) / 10)
         let formattedPercentCorrect = Double(round(1000 * deck.percentCorrect) / 10)
         averageCorrectLabel.text = "\(formattedCumulativePercentCorrect)%"
         lastRoundLabel.text = "\(formattedPercentCorrect)%"
-
-        playButton.layer.cornerRadius = 12
     }
 
     // MARK: - Actions
@@ -75,7 +81,9 @@ class DeckController: BaseViewController {
     }
 
     @IBAction func playTapped(_ sender: AnyObject) {
-        
+        let controller = CardController.createControllerFor(deck: deck)
+        controller.modalPresentationStyle = .fullScreen
+        self.present(controller, animated: true, completion: nil)
     }
 
 }
@@ -84,16 +92,10 @@ class DeckController: BaseViewController {
 extension DeckController: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let deck = self.deck else {
-            return 0
-        }
         return deck.cardCount
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let deck = self.deck else {
-            return UITableViewCell()
-        }
         let card = deck.cards[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: CardListCellId, for: indexPath) as! CardListCell
         cell.layoutFor(card: card)

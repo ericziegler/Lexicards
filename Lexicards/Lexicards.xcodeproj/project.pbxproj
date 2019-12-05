@@ -25,6 +25,9 @@
 		78BBFDEF2398185B00D7EC3C /* DebugData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BBFDEE2398185B00D7EC3C /* DebugData.swift */; };
 		78CF692223984BB000F8224B /* DeckController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CF692123984BB000F8224B /* DeckController.swift */; };
 		78CF69242399516800F8224B /* CardListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CF69232399516800F8224B /* CardListCell.swift */; };
+		78CF692623995C8200F8224B /* CardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CF692523995C8200F8224B /* CardController.swift */; };
+		78CF692C2399675100F8224B /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CF692B2399675100F8224B /* CardCell.swift */; };
+		78CF692E23997C6900F8224B /* FinishCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CF692D23997C6900F8224B /* FinishCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +51,9 @@
 		78BBFDEE2398185B00D7EC3C /* DebugData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugData.swift; sourceTree = "<group>"; };
 		78CF692123984BB000F8224B /* DeckController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckController.swift; sourceTree = "<group>"; };
 		78CF69232399516800F8224B /* CardListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListCell.swift; sourceTree = "<group>"; };
+		78CF692523995C8200F8224B /* CardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardController.swift; sourceTree = "<group>"; };
+		78CF692B2399675100F8224B /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
+		78CF692D23997C6900F8224B /* FinishCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +133,8 @@
 			children = (
 				78BBFDEC23968C0800D7EC3C /* DeckListCell.swift */,
 				78CF69232399516800F8224B /* CardListCell.swift */,
+				78CF692B2399675100F8224B /* CardCell.swift */,
+				78CF692D23997C6900F8224B /* FinishCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -138,6 +146,7 @@
 				78131E46239302EE0067336D /* Main.storyboard */,
 				78131E44239302EE0067336D /* MainController.swift */,
 				78CF692123984BB000F8224B /* DeckController.swift */,
+				78CF692523995C8200F8224B /* CardController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -238,12 +247,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78CF692E23997C6900F8224B /* FinishCell.swift in Sources */,
 				78542E6D239416B200A2B34C /* Deck.swift in Sources */,
 				78542E7123945F6C00A2B34C /* Constants.swift in Sources */,
 				78131E5D239303C10067336D /* FoundationExtensions.swift in Sources */,
 				78131E45239302EE0067336D /* MainController.swift in Sources */,
 				78131E43239302EE0067336D /* AppDelegate.swift in Sources */,
 				78BBFDEF2398185B00D7EC3C /* DebugData.swift in Sources */,
+				78CF692C2399675100F8224B /* CardCell.swift in Sources */,
 				78CF69242399516800F8224B /* CardListCell.swift in Sources */,
 				78131E64239304140067336D /* BaseTableViewController.swift in Sources */,
 				78131E60239304000067336D /* BaseNavigationController.swift in Sources */,
@@ -251,6 +262,7 @@
 				78CF692223984BB000F8224B /* DeckController.swift in Sources */,
 				78BBFDED23968C0800D7EC3C /* DeckListCell.swift in Sources */,
 				78131E62239304090067336D /* BaseViewController.swift in Sources */,
+				78CF692623995C8200F8224B /* CardController.swift in Sources */,
 				78542E6F23941D9500A2B34C /* DeckList.swift in Sources */,
 				78542E6B239416A800A2B34C /* Card.swift in Sources */,
 			);
