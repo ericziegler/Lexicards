@@ -50,8 +50,8 @@ class DeckController: BaseViewController {
 
         infoBackground.layer.cornerRadius = 12
         colorView.layer.cornerRadius = colorView.frame.size.height / 2
-        colorView.layer.borderColor = UIColor.black.cgColor
-        colorView.layer.borderWidth = 2
+        colorView.layer.borderColor = UIColor.darkGray.cgColor
+        colorView.layer.borderWidth = 1
 
         nameLabel.text = deck.name
         colorView.backgroundColor = deck.color.backgroundColor
@@ -70,8 +70,46 @@ class DeckController: BaseViewController {
         self.navigationController?.popViewController(animated: true)
     }
 
+    @IBAction func editTapped(_ sender: AnyObject) {
+        print("EDIT TAPPED")
+    }
+
     @IBAction func playTapped(_ sender: AnyObject) {
         
+    }
+
+}
+
+
+extension DeckController: UITableViewDataSource, UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard let deck = self.deck else {
+            return 0
+        }
+        return deck.cardCount
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let deck = self.deck else {
+            return UITableViewCell()
+        }
+        let card = deck.cards[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: CardListCellId, for: indexPath) as! CardListCell
+        cell.layoutFor(card: card)
+        return cell
+    }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CardListCellHeight
+    }
+
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50
+    }
+
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return UIView.createTableHeaderWith(title: "Deck Cards", tableView: tableView, bgColor: UIColor(hex: 0xdddddd), titleColor: UIColor(hex: 0x343434), font: UIFont.applicationBoldFontOfSize(20))
     }
 
 }

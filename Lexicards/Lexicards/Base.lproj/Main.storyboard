@@ -202,15 +202,34 @@
                                             <constraint firstAttribute="height" constant="40" id="n9r-cT-fU8"/>
                                         </constraints>
                                         <state key="normal" image="LeftArrow"/>
+                                        <connections>
+                                            <action selector="backTapped:" destination="sGE-qz-oeh" eventType="touchUpInside" id="bFc-YI-G7i"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yy3-Xh-fuZ" customClass="RegularButton" customModule="Lexicards" customModuleProvider="target">
+                                        <rect key="frame" x="341" y="56" width="70" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="rFc-rf-uHo"/>
+                                            <constraint firstAttribute="height" constant="40" id="wiu-dJ-fQ6"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="Edit">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="editTapped:" destination="sGE-qz-oeh" eventType="touchUpInside" id="LtZ-Zu-1FV"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.14117647059999999" green="0.14117647059999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Yy3-Xh-fuZ" secondAttribute="trailing" constant="4" id="8eD-e4-2Iq"/>
                                     <constraint firstItem="dje-Wa-Avn" firstAttribute="top" secondItem="ktW-qc-uuF" secondAttribute="bottom" constant="19" id="Dxo-sx-svo"/>
                                     <constraint firstItem="dje-Wa-Avn" firstAttribute="leading" secondItem="IE1-9v-DwB" secondAttribute="leading" id="KPM-mN-oOk"/>
                                     <constraint firstItem="NLL-Lt-y7j" firstAttribute="leading" secondItem="IE1-9v-DwB" secondAttribute="leading" constant="12" id="RCr-Yo-mnw"/>
                                     <constraint firstAttribute="trailing" secondItem="dje-Wa-Avn" secondAttribute="trailing" id="TPM-wm-fwL"/>
                                     <constraint firstAttribute="bottom" secondItem="dje-Wa-Avn" secondAttribute="bottom" id="W4k-jT-r7b"/>
+                                    <constraint firstItem="Yy3-Xh-fuZ" firstAttribute="centerY" secondItem="NLL-Lt-y7j" secondAttribute="centerY" id="XTc-3r-z6k"/>
                                     <constraint firstItem="NLL-Lt-y7j" firstAttribute="centerY" secondItem="ktW-qc-uuF" secondAttribute="centerY" constant="3" id="gdU-37-mg8"/>
                                     <constraint firstItem="ktW-qc-uuF" firstAttribute="centerX" secondItem="IE1-9v-DwB" secondAttribute="centerX" id="ofZ-tV-sEZ"/>
                                     <constraint firstAttribute="height" constant="110" id="yfk-E8-tMd"/>
@@ -225,19 +244,19 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RSz-1Z-mq5" customClass="BoldLabel" customModule="Lexicards" customModuleProvider="target">
                                                 <rect key="frame" x="50" y="9" width="77" height="36"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" red="0.20392156862745098" green="0.20392156862745098" blue="0.20392156862745098" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rounds played:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7rj-sx-4xl" customClass="BoldLabel" customModule="Lexicards" customModuleProvider="target">
                                                 <rect key="frame" x="13" y="70" width="147" height="26.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" red="0.20392156862745098" green="0.20392156862745098" blue="0.20392156862745098" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average correct:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UrK-Qt-T0B" customClass="BoldLabel" customModule="Lexicards" customModuleProvider="target">
                                                 <rect key="frame" x="13" y="104.5" width="156" height="26.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" red="0.20392156862745098" green="0.20392156862745098" blue="0.20392156862745098" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kz3-gt-Bl0" userLabel="Color View">
@@ -258,7 +277,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last round:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jwq-wG-xBD" customClass="BoldLabel" customModule="Lexicards" customModuleProvider="target">
                                                 <rect key="frame" x="13" y="139" width="107" height="26.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" red="0.20392156862745098" green="0.20392156862745098" blue="0.20392156862745098" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="679-06-ptH" customClass="RegularLabel" customModule="Lexicards" customModuleProvider="target">
@@ -312,20 +331,69 @@
                                             <constraint firstAttribute="height" constant="54" id="Zib-aL-ysw"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                        <state key="normal" title="Play Deck">
+                                        <state key="normal" title="Run Deck">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <action selector="playTapped:" destination="sGE-qz-oeh" eventType="touchUpInside" id="2qc-5P-lHD"/>
                                         </connections>
                                     </button>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="55" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bv9-08-VnT">
+                                        <rect key="frame" x="0.0" y="302" width="414" height="484"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="CardListCellId" rowHeight="55" id="mEd-kp-bMa" customClass="CardListCell" customModule="Lexicards" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="414" height="55"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mEd-kp-bMa" id="Ssu-d3-qnb">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="55"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="618-4A-GWN" userLabel="Separator">
+                                                            <rect key="frame" x="0.0" y="54" width="414" height="1"/>
+                                                            <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="1" id="Pc6-IO-wd8"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ggr-I2-R7M" customClass="RegularLabel" customModule="Lexicards" customModuleProvider="target">
+                                                            <rect key="frame" x="20" y="14" width="87" height="27"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                            <color key="textColor" white="0.202349101" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="618-4A-GWN" secondAttribute="bottom" id="BcI-iz-chQ"/>
+                                                        <constraint firstAttribute="trailing" secondItem="618-4A-GWN" secondAttribute="trailing" id="YfG-d0-9XX"/>
+                                                        <constraint firstItem="618-4A-GWN" firstAttribute="leading" secondItem="Ssu-d3-qnb" secondAttribute="leading" id="cwA-WO-OmU"/>
+                                                        <constraint firstItem="Ggr-I2-R7M" firstAttribute="leading" secondItem="Ssu-d3-qnb" secondAttribute="leadingMargin" id="d51-Wq-WxD"/>
+                                                        <constraint firstItem="Ggr-I2-R7M" firstAttribute="centerY" secondItem="Ssu-d3-qnb" secondAttribute="centerY" id="s9k-DE-Jkf"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="nameLabel" destination="Ggr-I2-R7M" id="uS4-n4-56A"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="sGE-qz-oeh" id="NVz-il-TC2"/>
+                                            <outlet property="delegate" destination="sGE-qz-oeh" id="7Pm-g8-3We"/>
+                                        </connections>
+                                    </tableView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="bv9-08-VnT" secondAttribute="trailing" id="Aos-Pe-Ds9"/>
                                     <constraint firstItem="ek9-jk-gOh" firstAttribute="leading" secondItem="488-gr-GZR" secondAttribute="leading" constant="30" id="Rcz-qv-Nmb"/>
                                     <constraint firstItem="qcb-JP-PC9" firstAttribute="centerX" secondItem="488-gr-GZR" secondAttribute="centerX" id="WFV-Hl-g1q"/>
+                                    <constraint firstAttribute="bottom" secondItem="bv9-08-VnT" secondAttribute="bottom" id="XN5-xg-qCY"/>
                                     <constraint firstItem="ek9-jk-gOh" firstAttribute="top" secondItem="488-gr-GZR" secondAttribute="top" constant="30" id="YsN-uk-PZq"/>
                                     <constraint firstAttribute="trailing" secondItem="ek9-jk-gOh" secondAttribute="trailing" constant="30" id="bVf-4Z-ebw"/>
+                                    <constraint firstItem="bv9-08-VnT" firstAttribute="leading" secondItem="488-gr-GZR" secondAttribute="leading" id="i2k-LH-kIJ"/>
+                                    <constraint firstItem="bv9-08-VnT" firstAttribute="top" secondItem="qcb-JP-PC9" secondAttribute="bottom" constant="17" id="rdY-pP-bRd"/>
                                     <constraint firstItem="qcb-JP-PC9" firstAttribute="top" secondItem="ek9-jk-gOh" secondAttribute="bottom" constant="16" id="xMe-fE-6bb"/>
                                 </constraints>
                             </view>

@@ -24,6 +24,7 @@
 		78BBFDED23968C0800D7EC3C /* DeckListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BBFDEC23968C0800D7EC3C /* DeckListCell.swift */; };
 		78BBFDEF2398185B00D7EC3C /* DebugData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BBFDEE2398185B00D7EC3C /* DebugData.swift */; };
 		78CF692223984BB000F8224B /* DeckController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CF692123984BB000F8224B /* DeckController.swift */; };
+		78CF69242399516800F8224B /* CardListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CF69232399516800F8224B /* CardListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		78BBFDEC23968C0800D7EC3C /* DeckListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckListCell.swift; sourceTree = "<group>"; };
 		78BBFDEE2398185B00D7EC3C /* DebugData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugData.swift; sourceTree = "<group>"; };
 		78CF692123984BB000F8224B /* DeckController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckController.swift; sourceTree = "<group>"; };
+		78CF69232399516800F8224B /* CardListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				78BBFDEC23968C0800D7EC3C /* DeckListCell.swift */,
+				78CF69232399516800F8224B /* CardListCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 				78131E45239302EE0067336D /* MainController.swift in Sources */,
 				78131E43239302EE0067336D /* AppDelegate.swift in Sources */,
 				78BBFDEF2398185B00D7EC3C /* DebugData.swift in Sources */,
+				78CF69242399516800F8224B /* CardListCell.swift in Sources */,
 				78131E64239304140067336D /* BaseTableViewController.swift in Sources */,
 				78131E60239304000067336D /* BaseNavigationController.swift in Sources */,
 				78131E5B239303B70067336D /* UIKitExtensions.swift in Sources */,
