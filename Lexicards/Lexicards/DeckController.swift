@@ -114,4 +114,11 @@ extension DeckController: UITableViewDataSource, UITableViewDelegate {
         return UIView.createTableHeaderWith(title: "Deck Cards", tableView: tableView, bgColor: UIColor(hex: 0xdddddd), titleColor: UIColor(hex: 0x343434), font: UIFont.applicationBoldFontOfSize(20))
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let card = deck.cards[indexPath.row]
+        let alert = UIAlertController(title: card.question, message: card.answer, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: OKTitle, style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+
 }
