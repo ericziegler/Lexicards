@@ -17,6 +17,8 @@
 		78131E60239304000067336D /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78131E5F239304000067336D /* BaseNavigationController.swift */; };
 		78131E62239304090067336D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78131E61239304090067336D /* BaseViewController.swift */; };
 		78131E64239304140067336D /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78131E63239304140067336D /* BaseTableViewController.swift */; };
+		78237B32239BE72200A9DC4B /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78237B31239BE72200A9DC4B /* AlertView.swift */; };
+		78237B34239BE8CA00A9DC4B /* AlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78237B33239BE8CA00A9DC4B /* AlertView.xib */; };
 		78542E6B239416A800A2B34C /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78542E6A239416A800A2B34C /* Card.swift */; };
 		78542E6D239416B200A2B34C /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78542E6C239416B200A2B34C /* Deck.swift */; };
 		78542E6F23941D9500A2B34C /* DeckList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78542E6E23941D9500A2B34C /* DeckList.swift */; };
@@ -43,6 +45,8 @@
 		78131E5F239304000067336D /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		78131E61239304090067336D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		78131E63239304140067336D /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
+		78237B31239BE72200A9DC4B /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		78237B33239BE8CA00A9DC4B /* AlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertView.xib; sourceTree = "<group>"; };
 		78542E6A239416A800A2B34C /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		78542E6C239416B200A2B34C /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
 		78542E6E23941D9500A2B34C /* DeckList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckList.swift; sourceTree = "<group>"; };
@@ -135,6 +139,8 @@
 				78CF69232399516800F8224B /* CardListCell.swift */,
 				78CF692B2399675100F8224B /* CardCell.swift */,
 				78CF692D23997C6900F8224B /* FinishCell.swift */,
+				78237B31239BE72200A9DC4B /* AlertView.swift */,
+				78237B33239BE8CA00A9DC4B /* AlertView.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -235,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				78131E4D239302EE0067336D /* LaunchScreen.storyboard in Resources */,
+				78237B34239BE8CA00A9DC4B /* AlertView.xib in Resources */,
 				78131E4A239302EE0067336D /* Assets.xcassets in Resources */,
 				78131E48239302EE0067336D /* Main.storyboard in Resources */,
 			);
@@ -248,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				78CF692E23997C6900F8224B /* FinishCell.swift in Sources */,
+				78237B32239BE72200A9DC4B /* AlertView.swift in Sources */,
 				78542E6D239416B200A2B34C /* Deck.swift in Sources */,
 				78542E7123945F6C00A2B34C /* Constants.swift in Sources */,
 				78131E5D239303C10067336D /* FoundationExtensions.swift in Sources */,

@@ -130,17 +130,20 @@ extension CardController: FinishCellDelegate {
             deck.cumulativeRoundCount += 1
             deck.cumulativeCardCount += deck.cardCount
             DeckList.shared.saveDecks()
-            let alert = UIAlertController(title: "Completed!", message: "You answered \(correctCount) out of \(deck.cardCount) cards correctly.", preferredStyle: .alert)
-            let continueAction = UIAlertAction(title: ContinueTitle, style: .default) { (action) in
-                self.dismiss(animated: true, completion: nil)
-            }
-            alert.addAction(continueAction)
-            self.present(alert, animated: true, completion: nil)
+            let alert = AlertView.createAlertFor(parentController: self, title: "Completed!", message: "You answered \(deck.correctCount) out of \(deck.cardCount) cards correctly.", buttonTitle: ContinueTitle)
+            alert.delegate = self
+            alert.showAlert()
         } else {
-            let alert = UIAlertController(title: "Incomplete!", message: "You must answer all cards before completing the deck.", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: OKTitle, style: .default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
+            let alert = AlertView.createAlertFor(parentController: self, title: "Incomplete!", message: "You must answer all cards before completing the deck.", buttonTitle: OKTitle)
+            alert.delegate = self
+            alert.showAlert()
         }
     }
 
+}
+
+extension CardController: AlertViewDelegate {
+    func okTappedForAlertView(alertView: AlertView) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }

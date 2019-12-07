@@ -115,10 +115,11 @@ extension DeckController: UITableViewDataSource, UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let navController = navigationController {
         let card = deck.cards[indexPath.row]
-        let alert = UIAlertController(title: card.question, message: card.answer, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: OKTitle, style: .default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+            let alert = AlertView.createAlertFor(parentController: navController, title: card.question, message: card.answer)
+            alert.showAlert()
+        }
     }
 
 }
