@@ -104,24 +104,32 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RightArrow" translatesAutoresizingMaskIntoConstraints="NO" id="ytY-zX-ekU" userLabel="Arrow Image">
-                                                            <rect key="frame" x="384" y="32" width="11" height="20"/>
+                                                            <rect key="frame" x="384" y="28" width="11" height="20"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="11" id="BZf-td-kpF"/>
                                                                 <constraint firstAttribute="height" constant="20" id="cVf-Oo-ks1"/>
                                                             </constraints>
                                                         </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i9Q-hq-ia8" customClass="BoldLabel" customModule="Lexicards" customModuleProvider="target">
+                                                            <rect key="frame" x="327" y="25.5" width="29" height="24"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
                                                     <constraints>
                                                         <constraint firstItem="zy1-TZ-2zW" firstAttribute="leading" secondItem="qUY-ZO-Ihy" secondAttribute="leading" id="463-xG-nXy"/>
                                                         <constraint firstItem="k5Q-V4-aik" firstAttribute="centerY" secondItem="n17-Ha-VcB" secondAttribute="centerY" id="5Ny-Cz-uUW"/>
                                                         <constraint firstItem="k5Q-V4-aik" firstAttribute="leading" secondItem="qUY-ZO-Ihy" secondAttribute="leadingMargin" id="9Zg-l3-apZ"/>
-                                                        <constraint firstItem="k5Q-V4-aik" firstAttribute="top" secondItem="ytY-zX-ekU" secondAttribute="bottom" constant="-26.5" id="G9Q-0S-cuE"/>
+                                                        <constraint firstItem="k5Q-V4-aik" firstAttribute="top" secondItem="ytY-zX-ekU" secondAttribute="bottom" constant="-22.5" id="G9Q-0S-cuE"/>
                                                         <constraint firstAttribute="trailing" secondItem="zy1-TZ-2zW" secondAttribute="trailing" id="IAw-Ft-boC"/>
                                                         <constraint firstAttribute="bottom" secondItem="zy1-TZ-2zW" secondAttribute="bottom" id="IOu-VM-mxR"/>
                                                         <constraint firstAttribute="trailing" secondItem="n17-Ha-VcB" secondAttribute="trailing" id="Ocz-1a-6ua"/>
                                                         <constraint firstAttribute="trailing" secondItem="ytY-zX-ekU" secondAttribute="trailing" constant="19" id="ded-dz-UqH"/>
                                                         <constraint firstItem="n17-Ha-VcB" firstAttribute="leading" secondItem="qUY-ZO-Ihy" secondAttribute="leading" id="nn9-RW-Pab"/>
                                                         <constraint firstItem="n17-Ha-VcB" firstAttribute="top" secondItem="qUY-ZO-Ihy" secondAttribute="top" id="oSj-5g-AV5"/>
+                                                        <constraint firstItem="ytY-zX-ekU" firstAttribute="leading" secondItem="i9Q-hq-ia8" secondAttribute="trailing" constant="28" id="uLo-pG-DES"/>
+                                                        <constraint firstItem="i9Q-hq-ia8" firstAttribute="centerY" secondItem="k5Q-V4-aik" secondAttribute="centerY" id="w0z-Nb-Aj3"/>
                                                         <constraint firstAttribute="bottom" secondItem="n17-Ha-VcB" secondAttribute="bottom" id="yLy-LX-hJm"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
@@ -129,6 +137,7 @@
                                                     <outlet property="arrowImageView" destination="ytY-zX-ekU" id="8cR-Nk-Jj6"/>
                                                     <outlet property="colorView" destination="n17-Ha-VcB" id="abP-g8-c6P"/>
                                                     <outlet property="nameLabel" destination="k5Q-V4-aik" id="Gaj-Ty-4RH"/>
+                                                    <outlet property="percentLabel" destination="i9Q-hq-ia8" id="dzr-5X-T7V"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>

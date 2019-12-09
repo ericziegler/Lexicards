@@ -19,6 +19,7 @@ class DeckListCell: UITableViewCell {
 
     @IBOutlet var colorView: GradientView!
     @IBOutlet var nameLabel: BoldLabel!
+    @IBOutlet var percentLabel: BoldLabel!
     @IBOutlet var arrowImageView: UIImageView!
 
     // MARK: - Init
@@ -32,6 +33,13 @@ class DeckListCell: UITableViewCell {
     func layoutForDeck(deck: Deck) {
         nameLabel.text = deck.name
         nameLabel.textColor = deck.color.foregroundColor
+        let formattedCumulativePercentCorrect = Double(round(1000 * deck.cumulativePercentCorrect) / 10)
+        if formattedCumulativePercentCorrect > 0 {
+            percentLabel.text = "\(formattedCumulativePercentCorrect)%"
+            percentLabel.textColor = deck.color.foregroundColor
+        } else {
+            percentLabel.text = nil
+        }
         arrowImageView.image = arrowImageView.image?.maskedImageWithColor(deck.color.foregroundColor)
 
         if deck.color == .white {

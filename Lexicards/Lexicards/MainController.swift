@@ -25,6 +25,11 @@ class MainController: BaseViewController {
         super.viewDidLoad()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        deckTable.reloadData()
+    }
+
     // MARK: - Actions
 
     @IBAction func addTapped(_ sender: AnyObject) {
