@@ -130,7 +130,7 @@ extension CardController: FinishCellDelegate {
             deck.cumulativeRoundCount += 1
             deck.cumulativeCardCount += deck.cardCount
             DeckList.shared.saveDecks()
-            let alert = AlertView.createAlertFor(parentController: self, title: "Completed!", message: "You answered \(deck.correctCount) out of \(deck.cardCount) cards correctly.", buttonTitle: ContinueTitle)
+            let alert = AlertView.createAlertFor(parentController: self, title: "Completed!", message: "You answered \(correctCount) out of \(deck.cardCount) cards correctly.", buttonTitle: ContinueTitle)
             alert.delegate = self
             alert.showAlert()
         } else {

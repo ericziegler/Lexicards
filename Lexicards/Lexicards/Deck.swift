@@ -32,6 +32,7 @@ enum DeckColor: Int {
     case navy = 0x003380
     case black = 0x000000
     case gray = 0xbbbbbb
+    case tan = 0xceb591
 
     var backgroundColor: UIColor {
         return UIColor(hex: self.rawValue)
@@ -39,7 +40,7 @@ enum DeckColor: Int {
 
     var foregroundColor: UIColor {
         switch self {
-        case .white, .yellow, .gray:
+        case .white, .yellow, .gray, .tan:
             return UIColor.black
         default:
             return UIColor.white
